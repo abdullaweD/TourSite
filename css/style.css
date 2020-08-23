@@ -64,7 +64,11 @@ body {
      display: block;
      font-size: 6rem;
      font-weight: 700;
+<<<<<<< Updated upstream
      letter-spacing: 3.5rem;
+=======
+     letter-spacing: 4rem;
+>>>>>>> Stashed changes
      animation: moveinLeft 1s ease-out;
 }
 .heading-primary-sub {
