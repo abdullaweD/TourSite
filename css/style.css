@@ -1,0 +1,127 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+* {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+}
+html {
+     font-size: 10px;
+}
+
+body {
+     font-family: "Lato", sans-serif;
+     /* font-weight: 400; */
+     line-height: 1.7;
+     color: #777;
+     margin: 3rem;
+}
+.header {
+     height: 95vh;
+     background-image: linear-gradient(
+               to bottom,
+               rgba(126, 213, 111, 0.808),
+               rgba(85, 197, 122, 0.808)
+          ),
+          url(../img/hero.jpg);
+     background-size: cover;
+     background-position: top;
+     clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+     position: relative;
+}
+.logo-box {
+     position: absolute;
+     top: 2rem;
+     left: 2rem;
+}
+.logo {
+     height: 3rem;
+}
+.logo:hover {
+     animation: moveinRight 1s;
+}
+.text-box {
+     position: absolute;
+     top: 40%;
+     left: 50%;
+     transform: translate(-50%, -40%);
+     text-align: center;
+}
+/* if it shaking add- backface-visibility*/
+.heading-primary {
+     color: #ffff;
+     text-transform: uppercase;
+     margin-bottom: 3rem;
+}
+.heading-primary-main {
+     display: block;
+     font-size: 6rem;
+     font-weight: 700;
+     letter-spacing: 3.5rem;
+     animation: moveinLeft 1s ease-out;
+}
+.heading-primary-sub {
+     display: block;
+     font-size: 1.7rem;
+     font-weight: 300;
+     letter-spacing: 1.37rem;
+     animation: moveinRight 1s ease-out;
+}
+@keyframes moveinLeft {
+     0% {
+          opacity: 0;
+
+          transform: translateX(-10rem);
+     }
+     80% {
+          transform: translateX(0.4rem);
+     }
+     100% {
+          opacity: 1;
+          transform: translate(0);
+     }
+}
+@keyframes moveinRight {
+     0% {
+          opacity: 0;
+
+          transform: translateX(10rem);
+     }
+     80% {
+          transform: translateX(-0.4rem);
+     }
+     100% {
+          opacity: 1;
+          transform: translate(0);
+     }
+}
+.btn:link,
+.btn:visited {
+     text-transform: uppercase;
+     text-decoration: none;
+     /* letter-spacing: 0.3rem; */
+     font-size: 1.4rem;
+     padding: 1.7rem 4rem;
+     display: inline-block;
+     border-radius: 5rem;
+     transition: all 0.2s;
+}
+.btn:hover {
+     transform: translateY(-3px);
+     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.157);
+}
+.btn:active {
+     transform: translateY(-1px);
+     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.281);
+}
+.btn-white {
+     background-color: azure;
+     color: rgb(148, 141, 141);
+}
