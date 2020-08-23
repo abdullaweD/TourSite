@@ -7,10 +7,12 @@ Dark green: #28b485
 
 */
 
-* {
+*,
+*::after,
+*::before {
      padding: 0;
      margin: 0;
-     box-sizing: border-box;
+     box-sizing: inherit;
 }
 html {
      font-size: 10px;
@@ -36,18 +38,18 @@ body {
      clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
      position: relative;
 }
-.logo-box {
+.header__logo-box {
      position: absolute;
      top: 2rem;
      left: 2rem;
 }
-.logo {
+.header__logo {
      height: 3rem;
 }
-.logo:hover {
+.header__logo:hover {
      animation: moveinRight 1s ease-out;
 }
-.text-box {
+.header__text-box {
      position: absolute;
      top: 40%;
      left: 50%;
@@ -59,15 +61,16 @@ body {
      color: #ffff;
      text-transform: uppercase;
      margin-bottom: 5rem;
+     backface-visibility: hidden;
 }
-.heading-primary-main {
+.heading-primary--main {
      display: block;
      font-size: 6rem;
      font-weight: 700;
-     letter-spacing: 3.5rem;
+     letter-spacing: 3rem;
      animation: moveinLeft 1s ease-out;
 }
-.heading-primary-sub {
+.heading-primary--sub {
      display: block;
      font-size: 1.7rem;
      font-weight: 300;
@@ -133,7 +136,7 @@ body {
      transform: translateY(-1px);
      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
-.btn-white {
+.btn--white {
      background-color: azure;
      color: rgb(148, 141, 141);
 }
@@ -149,14 +152,14 @@ body {
      z-index: -1;
      transition: all 0.3s;
 }
-.btn-white::after {
+.btn--white::after {
      background-color: azure;
 }
 .btn:hover::after {
      transform: scalex(1.5) scaleY(1.6);
      opacity: 0;
 }
-.btn-animate {
+.btn--animate {
      animation: moveinBottom 0.6s ease-out 0.8s;
      animation-fill-mode: backwards;
 }
