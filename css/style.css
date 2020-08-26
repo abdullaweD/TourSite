@@ -163,15 +163,21 @@ body {
      animation-fill-mode: backwards;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
      html {
           font-size: 5px;
      }
      body {
-          margin: 0;
+          position: relative;
+     }
+
+     .header {
+          clip-path: polygon(0 0, 100% 0, 100% 60vh, 0 100%);
      }
      .header__text-box {
+          position: absolute;
+          top: 40%;
           text-align: center;
-          left: 33rem;
+          left: 38rem;
      }
 }
